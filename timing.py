@@ -7,9 +7,9 @@ class Time:
         print(self.h , ":" , self.m)
 
     def second_to_time(sec):
-        hours = sec // 3600
-        minutes = (sec % 3600) // 60
-        return Time(hours , minutes)
+        h = sec // 3600
+        m = (sec % 3600) // 60
+        return Time(h , m)
     
     def time_to_sec(self):
         return (self.h * 3600) + (self.m * 60)
@@ -52,8 +52,8 @@ if user_choice == 1:
     else:
         print("Invalid number!")
 elif user_choice == 2:
-    seconds = int(input("Enter second: "))
+    seconds = int(input("Enter a number: "))
     user_int = Time.second_to_time(seconds)
-    print(seconds , "in time =" , user_int)
+    user_int.show()
 else:
     print("Invalid number!")
